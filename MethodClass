@@ -2,32 +2,32 @@ import java.util.Scanner;
 
 public class Lab {
 
-    Scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);                           //this Java function allow to input data for the user in the Console
    
 
-    public void verif()
+    public void verif()                                                //First method to check if a number is even or odd
     { 
       int num;
-      do
+      do                                                                  //Check the number using do while cycle
         {
           System.out.println("Insert a number bigger than 0:");
           num=input.nextInt();
         }
-      while( num > 0);     
-        if (x%2==0)
-         System.out.println("Il numero"+x+" è pari");
+      while( num < 0);                                               
+        if (num%2==0)                                                         //Take the number and divide by two if the rest is equal 0 the number is even otherwise is odd             
+         System.out.println("Il numero"+num+" è pari");
         else
-          System.out.println("Il numero"+x+" è dispari");
+          System.out.println("Il numero"+num+" è dispari");
       }
       
     }
-    public int checkInsert(String s)
+    public int checkInsert(String s)                            //Check user's input
     {
       int n;
        do
         {
           System.out.println(s);
-          n=Integer.parseInt(input.nextLine());
+          n=Integer.parseInt(input.nextLine());                //Java method for read next line 
         }
        while( n < 0);
        return n;
@@ -50,7 +50,7 @@ public class Lab {
 
     public void vertPrint()
     { 
-         int num=checkInsert("Insert a value:");
+         int num=checkInsert("Insert a value:");        // This cycle is true until  index is more than 0, it prints the numbers in column
          for(int i=num; i>0; i--)
            System.out.println(""+i);
     }
@@ -59,7 +59,7 @@ public class Lab {
     { 
         int num=checkInsert("Insert a value");
          int x=1;
-         while(x<=num)
+         while(x<=num)                //Print the numbers on the same line split by comma until the last, the final number is followed by a point
           {
             x++;
             if(x < num)
@@ -74,7 +74,6 @@ public class Lab {
         System.out.println("1) Check of an even and odd number.");
         System.out.println("2) Print in column");
         System.out.println("3) Print following the line");
-
         System.out.println("0) ESCI");
 
         return inserimento("Fai una scelta: ");
