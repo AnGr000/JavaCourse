@@ -1,1 +1,34 @@
-# JavaCourse
+//import java.util.Scanner;
+public class Main {
+    
+
+    public static void main( String[] args)
+    {
+        boolean flag = true;
+        Lab eserc = new Lab();
+        do
+        {
+            int  choice = eserc.menu();
+            switch(choice){
+              case 0:
+               flag = false;
+               System.out.println("End");
+              break;
+              case 1:
+               eserc.verif();
+              break;
+              case 2: 
+               eserc.vertPrint(); 
+              break;  
+              case 3: 
+               eserc.orzPrint();
+              break;
+              default:
+                System.out.println("Choice not accepted");
+              }
+        }
+        while(flag);
+    }
+}
+
+
