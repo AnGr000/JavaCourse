@@ -4,14 +4,15 @@ public class Main {
 
     public static void main( String[] args)
     {
-        boolean flag = true;
-        Lab eserc = new Lab();
-        do
+        boolean flag = true;                             
+        Lab eserc = new Lab();                        //Call the file, where there are methods
+        do                                            //Cycle every time the user want do stuffs exit with 0 and in the case put in other numbers except 1/2/3 the switch case
+                                                      //go into default
         {
             int  choice = eserc.menu();
             switch(choice){
               case 0:
-               flag = false;
+               flag = false;                                //Flag is false to end the menu, when user input 0
                System.out.println("End");
               break;
               case 1:
