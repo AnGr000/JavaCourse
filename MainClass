@@ -24,6 +24,15 @@ public class Main {
               case 3: 
                eserc.orzPrint();
               break;
+              case 4: 
+               eserc.semaphore();
+              break;
+              case 5: 
+                 eserc.totalizer();
+              break;
+              case 6: 
+                eserc.vocalOcc(eserc.readString("Insert a phrase:"));
+              break;
               default:
                 System.out.println("Choice not accepted");
               }
