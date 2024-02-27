@@ -68,11 +68,11 @@ public class Lab {
              System.out.print(x+".");
           }  
     }
-   public void semaphore()
+   public void semaphore()                                                                            //This is the function for traffic lights
     {
       String str;
-      str=leggiStringa("Insert a colour at traffic lights");      
-      if(str.equalsIgnoreCase("yellow") )
+      str=leggiStringa("Insert a colour at traffic lights");                                  
+      if(str.equalsIgnoreCase("yellow") )                                                                //Check if the input string is equal to yellow
         System.out.println("Attention!");
         else
          if(str.equalsIgnoreCase("red")  )
@@ -85,10 +85,10 @@ public class Lab {
     }
 
     public void totalizer(){
-      int num = 0, i = 0, min = 0, max = 0;
+      int num = 0, i = 0, min = 0, max = 0;                //This function can allow to insert some numbers, 
       do
        {
-          num+=insert("Insert a value:");
+          num+=insertCheck("Insert a value:");
           i++;
        }
       while(readString("Would u continue? y/n:").equalsIgnoreCase("s"));
@@ -103,7 +103,7 @@ public class Lab {
              max = num;
              System.out.println("The maximum is: "+max+" while the minimum is:"+min);
          }
-      System.out.println("The average of the numbers entered is:" +(double)num/i);
+      System.out.println("The average of the numbers entered is:" +(double)num/i);                //The avg is casting in double because can be a decimal where divide by i 
     }
      public void vocalOcc(String frase)
     {
