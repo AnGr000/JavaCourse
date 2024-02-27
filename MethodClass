@@ -68,15 +68,79 @@ public class Lab {
              System.out.print(x+".");
           }  
     }
+   public void semaforo()
+    {
+      String str;
+      str=leggiStringa("Insert a colour at traffic lights");
+      if(str.equalsIgnoreCase("yellow") )
+        System.out.println("Attention!");
+        else
+         if(str.equalsIgnoreCase("red")  )
+          System.out.println("Stop!");
+          else
+         if(str.equalsIgnoreCase("green") )
+          System.out.println("go!");
+           else 
+           System.out.println("You are not at traffic lights!");
+    }
+
+    public void totalizer(){
+      int num = 0, i = 0, min = 0, max = 0;
+      do
+       {
+          num+=insert("Insert a value:");
+          i++;
+       }
+      while(readString("Would u continue? y/n:").equalsIgnoreCase("s"));
+      if(num < min)
+        {
+           min = num;
+           System.out.println("The number min is: "+min+" while the maximum is:"+max);
+        }
+         else 
+         if( num > max)
+         {
+             max = num;
+             System.out.println("The maximum is: "+max+" while the minimum is:"+min);
+         }
+      System.out.println("The average of the numbers entered is:" +(double)num/i);
+    }
+     public void vocalOcc(String frase)
+    {
+      int count = 0, cont_a = 0, cont_e=0,cont_i=0, cont_o=0, cont_u=0, i;
+      frase=frase.replaceAll(" ","").toLowerCase();
+      System.out.println(frase);
+      for( i=0; i<frase.length(); i++) 
+      {
+        if(frase.charAt(i) == 'a')
+             cont_a++;
+        if(frase.charAt(i) == 'e')
+             cont_e++;
+        if(frase.charAt(i) == 'i')
+             cont_i++;
+        if( frase.charAt(i) == 'o' )
+            cont_o++;
+        if(frase.charAt(i) == 'u')
+             cont_u++;            
+      }
+     count += cont_a+cont_e+cont_i+cont_o+cont_u;
+     System.out.println("There are "+count+" vocals");
+     //System.out.println("La vocale a compare "+cont_a+" ì+la vocale e compare "+cont_e+" la vocale i compare "+cont_i+" la vocale o compare "+cont_o+" la vocale u compare "+cont_u);
+     int  diff = frase.length() - count;
+     System.out.println("There are in total: "+diff+" consonants);
+    }
     public int menu()
       {
         System.out.println("***MENU***");
         System.out.println("1) Check of an even and odd number.");
         System.out.println("2) Print in column");
         System.out.println("3) Print following the line");
+        System.out.println("4) Semaphore");
+        System.out.println("5) Totalizer");
+        System.out.println("6) Vocal occ");
         System.out.println("0) ESCI");
 
-        return inserimento("Fai una scelta: ");
+        return inserimento("Choice a number: ");
       }
 
 
