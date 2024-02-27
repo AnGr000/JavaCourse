@@ -68,10 +68,10 @@ public class Lab {
              System.out.print(x+".");
           }  
     }
-   public void semaforo()
+   public void semaphore()
     {
       String str;
-      str=leggiStringa("Insert a colour at traffic lights");
+      str=leggiStringa("Insert a colour at traffic lights");      
       if(str.equalsIgnoreCase("yellow") )
         System.out.println("Attention!");
         else
