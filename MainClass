@@ -6,7 +6,7 @@ public class Main {
     {
         boolean flag = true;                             
         Lab eserc = new Lab();                        //Call the file, where there are methods
-        Vectors v = new Vector();                     //File, where there are vectors methods
+        Vectors v = new Vectors();                     //File, where there are vectors methods
         do                                            //Cycle every time the user want do stuffs exit with 0 and in the case put in other numbers except 1/2/3 the switch case
                                                       //go into default
         {
