@@ -14,6 +14,7 @@
 3)The functions can be chosen by the user by entering a number as input through the menu.
 
 28/02/2024
+
 1)I created other choices for the menu
 2)The first one allows you to see if a word is palindrome so it can be read backwards, you do a character-by-character check
 3)The addition of the choice for the calculator; we wanted to reproduce the Windows calculator, with its basic functions. The number or partial value remains in view, the operator is always chosen first
