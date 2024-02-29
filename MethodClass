@@ -129,6 +129,64 @@ public class Lab {
      int  diff = frase.length() - count;
      System.out.println("There are in total: "+diff+" consonants);
     }
+
+    public  boolean palindrom(String frase)
+     {
+        frase=frase.replaceAll(" ","").toLowerCase();
+        for (int i=frase.length()-1, j=0; j<i/2; j++, i--)
+         {
+          if(frase.charAt(j) != frase.charAt(i))
+             return false;
+         }
+        return true;
+     }
+
+     public void calc(){
+      float a,b;
+      boolean flag;
+      char op ;
+      System.out.println("Insert a number:");
+      a=Float.parseFloat(input.nextLine());                     //input di un numero float
+      flag = true;
+      while(flag){                                                      //loop, ripete l'iterazione finchè non viene premuto l'uguale
+        System.out.println("Choose an aritmetic operation:");           //input dell'utente dell'operazione aritmetica, prima del secondo numero
+        op = input.nextLine().charAt(0);
+        switch(op)
+        {
+          case '+':
+          System.out.println("Insert a number:");
+          b=Float.parseFloat(input.nextLine());                     //input di un numero float, sarebbe il secondo numero che l'utente deve inserire
+          a=a+b;
+          System.out.println("The partial value is è:"+a);           
+          break;
+          case '-':
+          System.out.println("Insert a number:");
+          b=Float.parseFloat(input.nextLine());
+          a=a-b;
+          System.out.println("The partial value is:"+a);
+          break;
+          case '*':
+          System.out.println("Insert a number:");
+          b=Float.parseFloat(input.nextLine());
+          a=a*b;
+          System.out.println("The partial value is:"+a);
+          break;
+          case '/':
+          System.out.println("Insert a number:");
+          b=Float.parseFloat(input.nextLine());
+          a=a/b;
+          System.out.println("The partial value is:"+a);
+          break;
+          case '=':
+           System.out.println("The subtotal value is:"+a);
+           flag=false;
+          break;
+          default:
+          System.out.println("Other arithmetical operators are not allowed!");
+          break;
+        }
+      }
+     }
     public int menu()
       {
         System.out.println("***MENU***");
@@ -138,9 +196,12 @@ public class Lab {
         System.out.println("4) Semaphore");
         System.out.println("5) Totalizer");
         System.out.println("6) Vocal occ");
+        System.out.println("7) Palindrome");
+        System.out.println("8) Calculator");
+        System.out.println("9) Odd maximum");
         System.out.println("0) ESCI");
 
-        return inserimento("Choice a number: ");
+        return inserimento("Choose a number: ");
       }
 
 
