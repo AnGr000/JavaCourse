@@ -6,6 +6,7 @@ public class Main {
     {
         boolean flag = true;                             
         Lab eserc = new Lab();                        //Call the file, where there are methods
+        Vectors v = new Vector();                     //File, where there are vectors methods
         do                                            //Cycle every time the user want do stuffs exit with 0 and in the case put in other numbers except 1/2/3 the switch case
                                                       //go into default
         {
@@ -32,6 +33,22 @@ public class Main {
               break;
               case 6: 
                 eserc.vocalOcc(eserc.readString("Insert a phrase:"));
+              break;
+              case 7: 
+                if(eserc.palindrom(eserc.readString("Insert a phrase:")))
+                   System.out.println("The words are palindromes!");
+                else
+                  System.out.println("The words are not palindromes!");
+              break;
+              case 8:
+                eserc.calc();
+              break;
+              case 9:
+              int max =v.foundMaxOdd(v.inizVet(eserc.insert("Insert how many numbers u want"), eserc), eserc);
+              if(max!=Integer.MIN_VALUE)
+                  System.out.println("The maximum odd number is:"+max);
+              else 
+                  System.out.println("There are not odd numbers");
               break;
               default:
                 System.out.println("Choice not accepted");
