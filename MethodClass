@@ -133,7 +133,7 @@ public class Lab {
     public  boolean palindrom(String frase)
      {
         frase=frase.replaceAll(" ","").toLowerCase();
-        for (int i=frase.length()-1, j=0; j<i/2; j++, i--)
+        for (int i=frase.length()-1, j=0; j<i/2; j++, i--)         //This cycle take the phrase and split in two so algorithm is faster check only the half
          {
           if(frase.charAt(j) != frase.charAt(i))
              return false;
@@ -146,16 +146,16 @@ public class Lab {
       boolean flag;
       char op ;
       System.out.println("Insert a number:");
-      a=Float.parseFloat(input.nextLine());                     //input di un numero float
+      a=Float.parseFloat(input.nextLine());                     //Decimal number input
       flag = true;
-      while(flag){                                                      //loop, ripete l'iterazione finchè non viene premuto l'uguale
-        System.out.println("Choose an aritmetic operation:");           //input dell'utente dell'operazione aritmetica, prima del secondo numero
+      while(flag){                                                      //loop, repeats the iteration until the equal is pressed the flag will set on false
+        System.out.println("Choose an aritmetic operation:");           //user input of the arithmetic operation, before the second number
         op = input.nextLine().charAt(0);
-        switch(op)
+        switch(op)                                                
         {
           case '+':
           System.out.println("Insert a number:");
-          b=Float.parseFloat(input.nextLine());                     //input di un numero float, sarebbe il secondo numero che l'utente deve inserire
+          b=Float.parseFloat(input.nextLine());                     //input of a float number, it would be the second number the user has to enter
           a=a+b;
           System.out.println("The partial value is è:"+a);           
           break;
