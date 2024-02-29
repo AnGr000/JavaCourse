@@ -44,7 +44,7 @@ public class Main {
                 eserc.calc();
               break;
               case 9:
-              int max =v.foundMaxOdd(v.inizVet(eserc.insert("Insert how many numbers u want"), eserc), eserc);
+              int max =v.foundMaxOdd(v.inizVet(eserc.insert("Enter as many numbers as you like"), eserc), eserc);
               if(max!=Integer.MIN_VALUE)
                   System.out.println("The maximum odd number is:"+max);
               else 
