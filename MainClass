@@ -58,7 +58,7 @@ public class Main {
                else
                   System.out.println("There isn't any word!");
               case 11:
-                 v.sortWord(v.strVet(eserc.insertCheck("How many words do you want to insert?"), eserc),eserc.readString("Sorting"),eserc);
+                 v.sortWord(v.strVet(eserc.checkInsert("How many words do you want to insert?"), eserc),eserc.readString("Sorting"),eserc);
               break;
               case 12:
                  v.numbSort(v.inizVet(eserc.insert("Enter the numbers"), eserc),eserc.readString("Enter the sort type"),eserc);
