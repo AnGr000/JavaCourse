@@ -1,6 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
-public class Vettori {
+public class Vectors {
     
     Scanner input = new Scanner(System.in);
     public int[] inizVet(int dim, Lab eserc)
