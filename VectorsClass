@@ -30,7 +30,7 @@ public class Vettori {
        String[] vet=new String[dim];
 
             for(int i=0; i<dim; i++)
-                vet[i]=eserc.leggiStringa("Enter the "+(i+1)+"° word!");
+                vet[i]=eserc.readString("Enter the "+(i+1)+"° word!");
             return vet;
     }
 
