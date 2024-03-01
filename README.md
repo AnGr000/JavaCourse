@@ -22,6 +22,7 @@
 
 
 01/03/2024
+
 1)Creating algortimes in the Vectors file 
 2)The number sorting function allows given a vector with assigned values to put them in order
 3)The word sorting function in ascending or descending order
