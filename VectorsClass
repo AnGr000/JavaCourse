@@ -24,3 +24,70 @@ public class Vettori {
         }
         return max;
     }
+    public String[] strVet(int dim, Lab eserc)
+    {
+
+       String[] vet=new String[dim];
+
+            for(int i=0; i<dim; i++)
+                vet[i]=eserc.leggiStringa("Enter the "+(i+1)+"° word!");
+            return vet;
+    }
+
+    public int findWords(String[] vet, String search, Lab eserc)
+    {
+      int i, j =-1;                                //j-1 means that there isn t any word founded
+      //ricerca =input.nextLine();
+      for(i=0; i<vet.length; i++)
+       {
+        if(vet[i].equalsIgnoreCase(search))
+        System.out.println("Si ci arrivo so che la posizione è "+j);
+            j = i;
+
+       }
+
+           return j;    
+    }
+
+    public void numbSort(int[] vet, String ord, Lab eserc){
+        int j,i;
+        if(ord.equalsIgnoreCase("growing")){
+        for(i=0;i<vet.length-1;i++){
+            for(j=i+1;j<vet.length;j++){                        //swapping
+                if(vet[i]> vet[j]){
+                    int temp=vet[j];
+                    vet[j]=vet[i];
+                    vet[i]=temp;
+                }
+            }      
+        }
+    }
+    else if(ord.equalsIgnoreCase("decreasing")){
+        
+        for(i=0;i<vet.length-1;i++){
+            for(j=i+1;j<vet.length;j++){
+                if(vet[i]<vet[j]){                            //swapping
+                    int temp=vet[j];
+                    vet[j]=vet[i];
+                    vet[i]=temp;
+                }
+            }      
+        }
+    }
+    else
+     System.out.println("It is not possible to sort the numbers");
+    }
+
+    public void sortWord(String[] vet, String ord,Lab eserc){
+        int j,i;
+        for(i=0;i<vet.length-1;i++){
+            for(j=i+1;j<vet.length;j++){
+                if(vet[i].compareTo(vet[j])>0){                //sorting words, with swapping
+                    String temp=vet[j];
+                    vet[j]=vet[i];
+                    vet[i]=temp;
+                }
+            }      
+        } 
+    }
+}
