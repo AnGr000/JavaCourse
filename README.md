@@ -19,3 +19,10 @@
 2)The first one allows you to see if a word is palindrome so it can be read backwards, you do a character-by-character check
 3)The addition of the choice for the calculator; we wanted to reproduce the Windows calculator, with its basic functions. The number or partial value remains in view, the operator is always chosen first
 4)Starting to use arrays, I dabbled in creating an additional file where I could have clear array methods, so I created another object called in the main, the difficulty here was that the methods contained in the other class had to be passed as parameters, also called by the function to display them on the screen, inside the switch case
+
+
+01/03/2024
+1)Creating algortimes in the Vectors file 
+2)The number sorting function allows given a vector with assigned values to put them in order
+3)The word sorting function in ascending or descending order
+4)The function of finding a word inside a string vector
