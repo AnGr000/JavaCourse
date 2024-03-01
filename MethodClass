@@ -199,6 +199,9 @@ public class Lab {
         System.out.println("7) Palindrome");
         System.out.println("8) Calculator");
         System.out.println("9) Odd maximum");
+        System.out.println("10) Find the word");
+        System.out.println("11) Sort the words");
+        System.out.println("11) Sort the numbers");
         System.out.println("0) ESCI");
 
         return inserimento("Choose a number: ");
